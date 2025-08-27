@@ -1,0 +1,5 @@
+/node_modules/
+/.vscode/
+/vendor/
+/includes/.env
+.DS_Store
