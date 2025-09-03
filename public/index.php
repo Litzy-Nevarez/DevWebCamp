@@ -36,9 +36,18 @@ $router->get('/confirmar-cuenta', [AuthController::class, 'confirmar']);
 
 // Área de administración
 $router->get('/admin/dashboard', [DashboardController::class, 'index']);
+
+// Rutas para ponentes
 $router->get('/admin/ponentes', [PonentesController::class, 'index']);
+$router->get('/admin/ponentes/crear', [PonentesController::class, 'crear']);
+
+// Rutas para eventos
 $router->get('/admin/eventos', [EventosController::class, 'index']);
+
+// Rutas para usuarios registrados
 $router->get('/admin/registrados', [RegistradosController::class, 'index']);
+
+// Rutas para regalos
 $router->get('/admin/regalos', [RegalosController::class, 'index']);
 
 $router->comprobarRutas();
