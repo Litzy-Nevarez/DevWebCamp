@@ -9,8 +9,13 @@ use MVC\Router;
 class PonentesController {
 
     public static function index(Router $router) {
+
+        
+        $ponentes = Ponente::all();
+
         $router->render('admin/ponentes/index', [
-            'titulo' => 'Ponentes / Conferencistas'
+            'titulo' => 'Ponentes / Conferencistas',
+            'ponentes' => $ponentes
         ]);
     }
 
@@ -62,6 +67,33 @@ class PonentesController {
             'titulo' => 'Registrar Ponente',
             'alertas' => $alertas,
             'ponente' => $ponente
+        ]);
+    }
+
+    public static function editar(Router $router) {
+
+        $alertas = [];
+
+        $id = $_GET['id'];
+        $id = filter_var($id, FILTER_VALIDATE_INT);
+
+        if(!$id) {
+            header('Location: /admin/ponentes');
+        }
+
+        $ponente = Ponente::find($id);
+
+        if(!$ponente) {
+            header('Location: /admin/ponentes');
+        }
+
+        $ponente->imagen_actual = $ponente->imagen;
+        
+
+        $router->render('admin/ponentes/editar', [
+            'titulo' => 'Actualizar Ponente',
+            'alertas' => $alertas,
+            'ponente' => $ponente ?? null
         ]);
     }
 
