@@ -42,7 +42,7 @@
 
                         <td class="table__td--acciones">
                             <a class="table__accion table__accion--editar" href="/admin/eventos/editar?id=<?php echo $evento->id; ?>">
-                                <i class="fa-solid fa-user-pen"></i>
+                                <i class="fa-solid fa-pencil"></i>
                                 Editar
                             </a>
                             <form method="POST" action="/admin/eventos/eliminar" class="table__formulario">

@@ -64,5 +64,6 @@ $router->get('/admin/regalos', [RegalosController::class, 'index']);
 // Apis
 $router->get('/api/eventos-horario', [APIEventos::class, 'index']);
 $router->get('/api/ponentes', [APIPonentes::class, 'index']);
+$router->get('/api/ponente', [APIPonentes::class, 'ponente']);
 
 $router->comprobarRutas();
