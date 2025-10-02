@@ -3,6 +3,7 @@
 require_once __DIR__ . '/../includes/app.php';
 
 use MVC\Router;
+use Controllers\PaginasController;
 use Controllers\APIPonentes;
 use Controllers\APIEventos;
 use Controllers\AuthController;
@@ -60,6 +61,12 @@ $router->get('/admin/registrados', [RegistradosController::class, 'index']);
 
 // Rutas para regalos
 $router->get('/admin/regalos', [RegalosController::class, 'index']);
+
+// Área pública
+$router->get('/', [PaginasController::class, 'index']);
+$router->get('/devwepcamp', [PaginasController::class, 'evento']);
+$router->get('/paquetes', [PaginasController::class, 'paquetes']);
+$router->get('/workshop-conferencias', [PaginasController::class, 'conferencias']);
 
 // Apis
 $router->get('/api/eventos-horario', [APIEventos::class, 'index']);
