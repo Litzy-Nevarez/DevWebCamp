@@ -62,6 +62,8 @@ class PaginasController {
             }
         }
 
+        // debuguear($eventos_formateados['conferencias_v']);
+
         $router->render('pages/conferencias', [
             'titulo' => 'Conferencias & Workshops',
             'eventos' => $eventos_formateados,
