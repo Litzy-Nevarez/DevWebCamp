@@ -1,0 +1,26 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.resumen {
+
+    background-image: linear-gradient(to right, rgba(v.$azul, .7), rgba(v.$azul, .9)), url(../img/bg_numeros.jpg);
+    background-image: linear-gradient(to right, rgba(v.$azul, .7), rgba(v.$azul, .9)), image-set(
+        url(../img/bg_numeros.avif), 
+        url(../img/bg_numeros.webp), 
+        url(../img/bg_numeros.jpg));
+    
+    &__grid {
+
+    }
+
+    &__bloque {
+
+    }
+
+    &__texto {
+
+        &--numero {
+
+        }
+    }
+}

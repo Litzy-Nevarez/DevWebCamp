@@ -515,6 +515,10 @@ h3 {
   font-weight: bold;
 }
 
+.resumen {
+  background-image: linear-gradient(to right, rgba(0, 125, 244, 0.7), rgba(0, 125, 244, 0.9)), url(../img/bg_numeros.jpg);
+  background-image: linear-gradient(to right, rgba(0, 125, 244, 0.7), rgba(0, 125, 244, 0.9)), image-set(url(../img/bg_numeros.avif), url(../img/bg_numeros.webp), url(../img/bg_numeros.jpg));
+}
 .formulario {
   display: flex;
   flex-direction: column;
